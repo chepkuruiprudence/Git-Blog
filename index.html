@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Everyday Git</title>
+</head>
+<body>
+ <h1>What is Git</h1>
+ <p>Git is a version control system that records changes to files over, so thet you can recall other versions later.</p>
+ 
+ <p>It allows developers to:
+  <ol>
+   <li>Track and manage changes to code or files and documents.</li>
+   <li>Work collaboratively without overwriting each others changes.</li>
+   <li>Reverts to earliers versions if something breaks.</li>
+   <li>Maintain a clean, organized history of a projects evolution</li>
+  </ol>
+  <h2>Other Version Control System</h2>
+  <h2>Other Version Control Systems</h2>
+<ul>
+  <li><a href="https://courses.mercurialtones.com/users/sign_up">Mercurial</a></li>
+  <li><a href="https://cvs.nongnu.org/">Concurrent Versions Systems</a></li>
+  <li><a href="https://subversion.apache.org/">Subversion</a></li>
+</ul>
+
+
+ <p>This blog will focus mainly on <i>Git and Github</i></p>
+
+  <h1>Installation of git</h1>
+  <p>Follow the steps below
+   <ol>
+    <li>Check if you have an existing git in your machine or not. Run this command <i>git --version.</i>
+     If you have git it will look like sth like this,<figure><img src="" alt=""><figcaption></figcaption></figure><p>If not you will get something like <i><ul>command not found: git</ul></i></p>     
+    </li>
+    <li>To download git on windows visit <a href="https://git-scm.com/download/win"></a></li>
+    <li>Run the installer and check the necessary steps acccording to your preference.</li>
+   </ol>
+  </p>
+
+
+ </p>
+ <h1>Configuration of git</h1>
+ <ol>
+  <li>After installing run the following commands to set your username and email in your terminal.
+   <ol>
+    <li><i>git config --global user.name "Your Name"</i></li>
+    <li><i>git config --global user.email "your.email@example.com"</i><p>--global means it applies to all projects on your computer. You can use <i>git config user.name "Name"</i> inside a project to override it locally.</p></li>
+   </ol> 
+   <li>To verify yuour settings run the command <i><ul>git config --list</ul></i></li>
+   <figure><img src="" alt="">
+   <figcaption><ul>Setting up your Git username and email ensures your commits are properly attributed to you.</ul></figcaption></figure>
+
+ </ol>
+ <h1>Initializing a Git Repository</h1>
+ <h2>What is a Repository</h2>
+ <p>A Git repository is a virtual storage space where Git tracks and manages your project files and their revision history.</p>
+ <h2>How to initialize a git repository</h2>
+ <ol>
+  <li>Open your terminal and navigate to your projects directory by using the command <i>cd my-project</i> where my-project stands for the folder where your project is located</li>
+  <li>Run the following command <i>git status</i> to check the state of the working directory and staging area. It shows if the files are being tracked by git. .This creates a hidden .git folder inside your directory, where git stores all the tracking information. If not you get the message <i>fatal: not a git repository (or any of the parent directories): .git</i>.</li></li>
+  <li>Run the following command <i>git init
+  </i></li>
+ </ol>
+ <figure><img src="" alt=""><figcaption><ul>Initializing a Git repository in your project directory creates a hidden .git folder where Git tracks all changes.</ul></figcaption></figure>
+
+ <h1>Adding Files to the Staging Area</h1>
+ <p>A staging area is an intermdiate space where you can organize changes before commiting them to the repository.</p>
+ <p>To add changes to the staging area use the command <i>git add File_name</i> i.e git add chapter1</p>
+ <p>When you want to add all files at a go you can use <i>git add -A </i> or <i>git add .</i></p>
+ <figure><img src="" alt=""><figcaption></figcaption></figure>
+ <h1>Commiting Changes</h1>
+  <ul>
+   <p>To commit we use <i>git commit -m "MESSAGE"</i> command. <b>Message</b> refers to  short descriptive commit message of your own. It answers the question what does the commit message do i.e <i>git commit -m "write chapters 1 to 5"</i></p>
+   <figure><img src="" alt=""><figcaption></figcaption></figure>
+  </ul>
+  <p>To view past commits we use the command <i>git log </i> and <i>git log --oneline</i> for more compact view. To see changes in files we use <i>git log -p</i></p> 
+  <p>To go back to the previous commit we use <i>git checkout commit-hash</i> and to return to your latest commit  you use <i>git checkout main</i></p>
+   <figure><img src="" alt=""><figcaption></figcaption></figure>
+<h1>Branches</h1>
+<p>Branches are timelines for a project that allow us to create separate contexts where we can try new things or even work on multiple ideas in parallel</p>
+<h2>Importance of Branches</h2>
+
+<h1>Creating Branches</h1>
+<ul>
+ <li>Use the command <i>git branch BRANCH_NAME</i> where you replace BRANCH_NAME with the prefered branch name i.e <i>git branch prologue</i></li>
+ <h1>Viewing All Branches</h1>
+ <p>To view all branches use the command <i>git branch</i> with the active branch having an asterix beforeit.</p>
+</ul>
+<figure><img src="" alt=""><figcaption></figcaption></figure>
+<h1>Switching Branches</h1>
+<p>This means changing the active branch. To switch branches we use the command <i>git switch BRANCH_NAME</i> where you replace the BRANCH_NAME with the actual branch name i.e <i>git switch chepkuruiprudence</i>. This will change the active branch to chepkuruiprudence</p>
+<figure><img src="" alt=""><figcaption></figcaption></figure>
+<h1>Merging a Branch</h1>
+<h1>Deleting a Branch</h1>
+<p>to delete a branch we use the command <i>git branch -d BRANCH_NAME</i> i.e <i>git branch -d chepkuruiprudence</i></p>
+<figure><img src="" alt=""><figcaption></figcaption></figure>
+<h1>Recommendation</h1>
+<p><b>Go ahead and learn:</b>
+ <ul>
+  <li>How to sign up in github.</li>
+  <li>Creating repositories in github.</li>
+  <li>The difference between Git and Github</li>
+  <li>Exhaustive working of github.</li>
+ </ul>
+</p>
+
+</body>
+</html>
